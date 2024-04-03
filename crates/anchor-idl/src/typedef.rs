@@ -7,7 +7,7 @@ use quote::{format_ident, quote};
 
 use crate::StructOpts;
 
-#[derive(Copy, Clone, Debug, Default)]
+#[derive(Debug, Copy, Clone, Default)]
 pub struct FieldListProperties {
     pub can_copy: bool,
     pub can_derive_default: bool,

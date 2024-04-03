@@ -12,7 +12,7 @@ use crate::{
     generate_accounts, generate_ix_handlers, generate_ix_structs, generate_typedefs, GEN_VERSION,
 };
 
-#[derive(Default, FromMeta)]
+#[derive(Debug, Default, FromMeta)]
 pub struct GeneratorOptions {
     /// Path to the IDL.
     pub idl_path: String,
@@ -57,7 +57,7 @@ impl GeneratorOptions {
     }
 }
 
-#[derive(Clone, Copy, Default)]
+#[derive(Debug, Clone, Copy, Default)]
 pub struct StructOpts {
     pub packed: bool,
     pub zero_copy: bool,

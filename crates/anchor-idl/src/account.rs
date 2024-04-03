@@ -36,7 +36,7 @@ pub fn generate_account_fields(
                 let (sub_structs, sub_fields) = generate_account_fields(&sub_name, &inner.accounts);
                 all_structs.push(sub_structs);
                 all_structs.push(quote! {
-                    #[derive(Accounts)]
+                    #[derive(Debug, Accounts)]
                     pub struct #sub_ident<'info> {
                         #sub_fields
                     }
